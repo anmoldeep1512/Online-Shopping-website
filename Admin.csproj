@@ -1,0 +1,425 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F016BE9-291D-4C8F-935D-5AC81CC0F393}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Admin</RootNamespace>
+    <AssemblyName>Admin</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44345</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AddBrand.aspx" />
+    <Content Include="Admin\AddCategory.aspx" />
+    <Content Include="Admin\AddGender.aspx" />
+    <Content Include="Admin\AddProduct.aspx" />
+    <Content Include="Admin\AddSize.aspx" />
+    <Content Include="Admin\AdminHome.aspx" />
+    <Content Include="Admin\AdminLogin.aspx" />
+    <Content Include="Admin\css\bootstrap-grid.css" />
+    <Content Include="Admin\css\bootstrap-grid.min.css" />
+    <Content Include="Admin\css\bootstrap-reboot.css" />
+    <Content Include="Admin\css\bootstrap-reboot.min.css" />
+    <Content Include="Admin\css\bootstrap-theme.css" />
+    <Content Include="Admin\css\bootstrap-theme.min.css" />
+    <Content Include="Admin\css\bootstrap.css" />
+    <Content Include="Admin\css\bootstrap.min.css" />
+    <Content Include="Admin\css\Custome.css" />
+    <Content Include="Admin\icons\adminIcon.png" />
+    <Content Include="Admin\icons\safeIcons.png" />
+    <Content Include="Admin\Images\ProductImages\2\Red Jumpsuit01.jpg" />
+    <Content Include="Admin\Images\ProductImages\2\Red Jumpsuit02.jpg" />
+    <Content Include="Admin\Images\ProductImages\2\Red Jumpsuit03.jpg" />
+    <Content Include="Admin\Images\ProductImages\2\Red Jumpsuit04.jpg" />
+    <Content Include="Admin\Images\Shoes.jpeg" />
+    <Content Include="Admin\Images\tshirt.jpeg" />
+    <Content Include="Admin\ImgSlider\1.jpg" />
+    <Content Include="Admin\ImgSlider\2.png" />
+    <Content Include="Admin\ImgSlider\3.png" />
+    <Content Include="Admin\ImgSlider\chicago.jpg" />
+    <Content Include="Admin\ImgSlider\la.jpg" />
+    <Content Include="Admin\ImgSlider\ny.jpg" />
+    <Content Include="Admin\js\bootstrap.bundle.js" />
+    <Content Include="Admin\js\bootstrap.bundle.min.js" />
+    <Content Include="Admin\js\bootstrap.js" />
+    <Content Include="Admin\js\bootstrap.min.js" />
+    <Content Include="Admin\js\npm.js" />
+    <Content Include="Admin\Mobile\iphone11.jpeg" />
+    <Content Include="Admin\SubCategory.aspx" />
+    <Content Include="App_Data\WebMall.mdf" />
+    <Content Include="App_Data\WebMall1.mdf" />
+    <Content Include="App_Data\WebMall1_log.ldf">
+      <DependentUpon>WebMall1.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\WebMall_log.ldf">
+      <DependentUpon>WebMall.mdf</DependentUpon>
+    </Content>
+    <Content Include="css\bootstrap-grid.css" />
+    <Content Include="css\bootstrap-grid.min.css" />
+    <Content Include="css\bootstrap-reboot.css" />
+    <Content Include="css\bootstrap-reboot.min.css" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\Custome.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="icons\adminBanner.jpg" />
+    <Content Include="icons\adminIcon.png" />
+    <Content Include="icons\deleteuser.png" />
+    <Content Include="icons\iconadmin.png" />
+    <Content Include="icons\register.png" />
+    <Content Include="icons\registrationLogo.png" />
+    <Content Include="icons\safeIcons.png" />
+    <Content Include="icons\updateuser.png" />
+    <Content Include="icons\user.png" />
+    <Content Include="icons\userlog.png" />
+    <Content Include="Images\NoImage.png" />
+    <Content Include="Images\ProductImages\2\Red Jumpsuit01.jpg" />
+    <Content Include="Images\ProductImages\2\Red Jumpsuit02.jpg" />
+    <Content Include="Images\ProductImages\2\Red Jumpsuit03.jpg" />
+    <Content Include="Images\ProductImages\2\Red Jumpsuit04.jpg" />
+    <Content Include="Images\Shoes.jpeg" />
+    <Content Include="Images\tshirt.jpeg" />
+    <Content Include="ImgSlider\1.jpg" />
+    <Content Include="ImgSlider\2.png" />
+    <Content Include="ImgSlider\3.png" />
+    <Content Include="ImgSlider\chicago.jpg" />
+    <Content Include="ImgSlider\la.jpg" />
+    <Content Include="ImgSlider\ny.jpg" />
+    <Content Include="js\bootstrap.bundle.js" />
+    <Content Include="js\bootstrap.bundle.min.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="LandingPage.aspx" />
+    <Content Include="Mobile\iphone11.jpeg" />
+    <Content Include="User\Cart.aspx" />
+    <Content Include="User\css\bootstrap-grid.css" />
+    <Content Include="User\css\bootstrap-grid.min.css" />
+    <Content Include="User\css\bootstrap-reboot.css" />
+    <Content Include="User\css\bootstrap-reboot.min.css" />
+    <Content Include="User\css\bootstrap-theme.css" />
+    <Content Include="User\css\bootstrap-theme.min.css" />
+    <Content Include="User\css\bootstrap.css" />
+    <Content Include="User\css\bootstrap.min.css" />
+    <Content Include="User\css\Custome.css" />
+    <Content Include="User\DeleteUser.aspx" />
+    <Content Include="User\icons\safeIcons.png" />
+    <Content Include="User\Images\Shoes.jpeg" />
+    <Content Include="User\Images\tshirt.jpeg" />
+    <Content Include="User\ImgSlider\1.jpg" />
+    <Content Include="User\ImgSlider\2.png" />
+    <Content Include="User\ImgSlider\3.png" />
+    <Content Include="User\ImgSlider\chicago.jpg" />
+    <Content Include="User\ImgSlider\la.jpg" />
+    <Content Include="User\ImgSlider\ny.jpg" />
+    <Content Include="User\js\bootstrap.bundle.js" />
+    <Content Include="User\js\bootstrap.bundle.min.js" />
+    <Content Include="User\js\bootstrap.js" />
+    <Content Include="User\js\bootstrap.min.js" />
+    <Content Include="User\js\npm.js" />
+    <Content Include="User\LoginPage.aspx" />
+    <Content Include="User\Products.aspx" />
+    <Content Include="User\ProductView.aspx" />
+    <Content Include="User\RegisterPage.aspx" />
+    <Content Include="User\UpdateUser.aspx" />
+    <Content Include="User\UserHome.aspx" />
+    <Content Include="User\UserProfile.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AddBrand.aspx.cs">
+      <DependentUpon>AddBrand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddBrand.aspx.designer.cs">
+      <DependentUpon>AddBrand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddCategory.aspx.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddCategory.aspx.designer.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddGender.aspx.cs">
+      <DependentUpon>AddGender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddGender.aspx.designer.cs">
+      <DependentUpon>AddGender.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddSize.aspx.cs">
+      <DependentUpon>AddSize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddSize.aspx.designer.cs">
+      <DependentUpon>AddSize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMasterPage.Master.cs">
+      <DependentUpon>AdminMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMasterPage.Master.designer.cs">
+      <DependentUpon>AdminMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SubCategory.aspx.cs">
+      <DependentUpon>SubCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SubCategory.aspx.designer.cs">
+      <DependentUpon>SubCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LandingPage.aspx.cs">
+      <DependentUpon>LandingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LandingPage.aspx.designer.cs">
+      <DependentUpon>LandingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\DeleteUser.aspx.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\DeleteUser.aspx.designer.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ProductView.aspx.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ProductView.aspx.designer.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\RegisterPage.aspx.cs">
+      <DependentUpon>RegisterPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\RegisterPage.aspx.designer.cs">
+      <DependentUpon>RegisterPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\UpdateUser.aspx.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UpdateUser.aspx.designer.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserHome.aspx.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UserHome.aspx.designer.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserProfile.aspx.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UserProfile.aspx.designer.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\css\bootstrap-grid.css.map" />
+    <Content Include="Admin\css\bootstrap-grid.min.css.map" />
+    <Content Include="Admin\css\bootstrap-reboot.css.map" />
+    <Content Include="Admin\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Admin\css\bootstrap-theme.css.map" />
+    <Content Include="Admin\css\bootstrap-theme.min.css.map" />
+    <Content Include="Admin\css\bootstrap.css.map" />
+    <Content Include="Admin\css\bootstrap.min.css.map" />
+    <Content Include="Admin\js\bootstrap.bundle.js.map" />
+    <Content Include="Admin\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Admin\js\bootstrap.js.map" />
+    <Content Include="Admin\js\bootstrap.min.js.map" />
+    <Content Include="Admin\AdminMasterPage.Master" />
+    <Content Include="css\bootstrap-grid.css.map" />
+    <Content Include="css\bootstrap-grid.min.css.map" />
+    <Content Include="css\bootstrap-reboot.css.map" />
+    <Content Include="css\bootstrap-reboot.min.css.map" />
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap-theme.min.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="js\bootstrap.bundle.js.map" />
+    <Content Include="js\bootstrap.bundle.min.js.map" />
+    <Content Include="js\bootstrap.js.map" />
+    <Content Include="js\bootstrap.min.js.map" />
+    <None Include="packages.config" />
+    <Content Include="User\User.Master" />
+    <Content Include="User\css\bootstrap-grid.css.map" />
+    <Content Include="User\css\bootstrap-grid.min.css.map" />
+    <Content Include="User\css\bootstrap-reboot.css.map" />
+    <Content Include="User\css\bootstrap-reboot.min.css.map" />
+    <Content Include="User\css\bootstrap-theme.css.map" />
+    <Content Include="User\css\bootstrap-theme.min.css.map" />
+    <Content Include="User\css\bootstrap.css.map" />
+    <Content Include="User\css\bootstrap.min.css.map" />
+    <Content Include="User\js\bootstrap.bundle.js.map" />
+    <Content Include="User\js\bootstrap.bundle.min.js.map" />
+    <Content Include="User\js\bootstrap.js.map" />
+    <Content Include="User\js\bootstrap.min.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58751</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44345/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
